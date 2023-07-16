@@ -1,20 +1,28 @@
 #!/bin/bash
 
-mkdir -p ~/privesc
+TARGET_FOLDER=~/privesc
+echo "TARGET FOLDER: $TARGET_FOLDER"
+mkdir -p $TARGET_FOLDER
 
 # pspy
 PSPY_VERSION=$(curl -s https://github.com/DominicBreuker/pspy/tags | grep -Eo 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -u | tail -n 1)
 echo "PSPY VERSION: $PSPY_VERSION"
-wget -q https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32 -O ~/privesc/pspy32
-wget -q https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64 -O ~/privesc/pspy64
-wget -q https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy32s -O ~/privesc/pspy32s
-wget -q https://github.com/DominicBreuker/pspy/releases/download/v1.2.1/pspy64s -O ~/privesc/pspy64s
+wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/pspy32 -O $TARGET_FOLDER/pspy32
+wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/pspy64 -O $TARGET_FOLDER/pspy64
+wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/pspy32s -O $TARGET_FOLDER/pspy32s 
+wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/pspy64s -O $TARGET_FOLDER/pspy64s 
 
 # lp/wp.sh
-wget -q https://github.com/carlospolop/PEASS-ng/releases/download/20230702-bc7ce3ac/linpeas.sh -O ~/privesc/lp.sh
-wget -q https://github.com/carlospolop/PEASS-ng/releases/download/20230702-bc7ce3ac/winPEAS.bat -O ~/privesc/wp.bat
+wget -q https://github.com/carlospolop/PEASS-ng/releases/download/20230702-bc7ce3ac/linpeas.sh -O $TARGET_FOLDER/lp.sh
+wget -q https://github.com/carlospolop/PEASS-ng/releases/download/20230702-bc7ce3ac/winPEAS.bat -O $TARGET_FOLDER/wp.bat
 
 # socat
-wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/socat -O ~/privesc/socat
+wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/socat -O $TARGET_FOLDER/socat
 
-chmod +x *
+# chisel
+CHISEL_VERSION=$(curl -s https://github.com/jpillora/chisel | grep -Eo 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -u | tail -n 1)
+echo "CHISEL VERSION: $CHISEL_VERSION"
+wget -q https://github.com/jpillora/chisel/releases/download/$CHISEL_VERSION/chisel_1.8.1_linux_amd64.gz -O $TARGET_FOLDER/chisel.gz
+gzip -d $TARGET_FOLDER/chisel.gz
+
+chmod +x $TARGET_FOLDER/*
