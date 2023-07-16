@@ -13,8 +13,8 @@ wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/p
 wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/pspy64s -O $TARGET_FOLDER/pspy64s 
 
 # lp.sh/wp.bat
-wget -q https://github.com/carlospolop/PEASS-ng/releases/download/20230702-bc7ce3ac/linpeas.sh -O $TARGET_FOLDER/lp.sh
-wget -q https://github.com/carlospolop/PEASS-ng/releases/download/20230702-bc7ce3ac/winPEAS.bat -O $TARGET_FOLDER/wp.bat
+wget -q https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O $TARGET_FOLDER/lp.sh
+wget -q https://github.com/carlospolop/PEASS-ng/releases/latest/download/winpeas.bat -O $TARGET_FOLDER/wp.bat
 
 # socat
 wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/socat -O $TARGET_FOLDER/socat
