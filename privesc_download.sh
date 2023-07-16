@@ -22,7 +22,7 @@ wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x8
 # chisel
 CHISEL_VERSION=$(curl -s https://github.com/jpillora/chisel | grep -Eo 'v[0-9]+\.[0-9]+\.[0-9]+' | sort -u | tail -n 1)
 echo "CHISEL VERSION: $CHISEL_VERSION"
-wget -q https://github.com/jpillora/chisel/releases/download/$CHISEL_VERSION/chisel_1.8.1_linux_amd64.gz -O $TARGET_FOLDER/chisel.gz
+wget -q https://github.com/jpillora/chisel/releases/download/$CHISEL_VERSION/chisel_${CHISEL_VERSION:1}_linux_amd64.gz -O $TARGET_FOLDER/chisel.gz
 gzip -d $TARGET_FOLDER/chisel.gz
 
 chmod +x $TARGET_FOLDER/*
