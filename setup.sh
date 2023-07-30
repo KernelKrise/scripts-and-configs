@@ -13,6 +13,16 @@ sudo bash -c "echo 'IyEvYmluL2Jhc2gKc3VkbyBhcHQgdXBkYXRlIC15CgojIENoZWNrIGlmIHRo
 sudo chmod +x /usr/bin/upd
 echo "[+] upd tool successfully set"
 
+# upgrade system
 echo "[~] Starting upgrading system"
 upd --full
 echo "[+] System upgraded"
+
+# install tool to add repos to apt
+sudo apt install software-properties-common
+
+# install vscode (and Microsoft key)
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+sudo add-apt-repository 'deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main'
+sudo apt install code -y
