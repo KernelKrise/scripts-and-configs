@@ -15,6 +15,8 @@ wget -q https://github.com/DominicBreuker/pspy/releases/download/$PSPY_VERSION/p
 # lp.sh/wp.bat
 wget -q https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh -O $TARGET_FOLDER/lp.sh
 wget -q https://github.com/carlospolop/PEASS-ng/releases/latest/download/winpeas.bat -O $TARGET_FOLDER/wp.bat
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/winPEASx64.exe -O $TARGET_FOLDER/wp64.exe
+wget https://github.com/carlospolop/PEASS-ng/releases/latest/download/winPEASx86.exe -O $TARGET_FOLDER/wp32.exe
 
 # socat
 wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/socat -O $TARGET_FOLDER/socat
