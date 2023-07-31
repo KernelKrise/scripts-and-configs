@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo apt update -y
+
+# Check if the user provided the --full argument
+if [[ $1 == "--full" ]]; then
+  echo "Running a full system upgrade..."
+  sudo apt full-upgrade -y
+else
+  echo "You can use --full argument to perform a full system upgrade"
+  # sudo apt upgrade -y
+  sudo apt dist-upgrade -y
+fi
