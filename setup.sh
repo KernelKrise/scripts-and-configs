@@ -9,7 +9,7 @@ xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "Virt
 echo "[+] Wallpaper was successfully set"
 
 # set update tool
-sudo wget https://raw.githubusercontent.com/KernelKrise/scripts-and-configs/main/upd -O /usr/bin/upd
+sudo -q wget https://raw.githubusercontent.com/KernelKrise/scripts-and-configs/main/upd -O /usr/bin/upd
 sudo chmod +x /usr/bin/upd
 echo "[+] upd tool successfully set"
 
@@ -37,8 +37,13 @@ echo "[+] jq installed"
 echo '{"security.workspace.trust.enabled": false}' | jq > $HOME/.config/Code/User/settings.json
 echo "[+] forced vscode to always trust folders"
 
-# install vscode extensions
+# install vscode extensions                                                                                                                 <-- TBD
 echo "[~] installing vscode extensions"
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension mgmcdermott.vscode-language-babel
+
+# Add some aliases
+echo -n '\n# Custom config:\n' >> ~/.zshrc
+echo "alias ll='ls -alh'" >> ~/.zshrc
+echo "alias pyhttp='python3 -m http.server 9000'" >> ~/.zshrc
