@@ -47,3 +47,11 @@ code --install-extension mgmcdermott.vscode-language-babel
 echo -n '\n# Custom config:\n' >> ~/.zshrc
 echo "alias ll='ls -alh'" >> ~/.zshrc
 echo "alias pyhttp='python3 -m http.server 9000'" >> ~/.zshrc
+echo "alias cme='crackmapexec'" >> ~/.zshrc
+echo "[+] Added aliases: ll='ls -alh', pyhttp='python3 -m http.server 9000', cme='crackmapexec'"
+
+# Building neovim
+sudo apt install ninja-build gettext cmake -y
+echo "[+] ninja-build, gettext, cmake installed"
+git clone https://github.com/neovim/neovim
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
