@@ -22,7 +22,7 @@ TO DO:
 ```
  + BloodHound
  + BloodHound-python
- + privilege escalation tools (https://github.com/KernelKrise/scripts-and-configs/blob/main/privesc_download.sh)
+ + privilege escalation tools (privesc_download.sh)
  + add more privesc tools (SharpHound, PowerView, etc)
  + kerbrute
  + droopescan
