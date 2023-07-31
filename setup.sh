@@ -9,7 +9,7 @@ xfconf-query -c xfce4-desktop -p $(xfconf-query -c xfce4-desktop -l | grep "Virt
 echo "[+] Wallpaper was successfully set"
 
 # set update tool
-sudo bash -c "echo 'IyEvYmluL2Jhc2gKc3VkbyBhcHQgdXBkYXRlIC15CgojIENoZWNrIGlmIHRoZSB1c2VyIHByb3ZpZGVkIHRoZSAtLWZ1bGwgYXJndW1lbnQKaWYgW1sgJDEgPT0gIi0tZnVsbCIgXV07IHRoZW4KICBlY2hvICJSdW5uaW5nIGEgZnVsbCBzeXN0ZW0gdXBncmFkZS4uLiIKICBzdWRvIGFwdCBmdWxsLXVwZ3JhZGUgLXkKZWxzZQogIGVjaG8gIllvdSBjYW4gdXNlIC0tZnVsbCBhcmd1bWVudCB0byBwZXJmb3JtIGEgZnVsbCBzeXN0ZW0gdXBncmFkZSIKICAjIHN1ZG8gYXB0IHVwZ3JhZGUgLXkKICBzdWRvIGFwdCBkaXN0LXVwZ3JhZGUgLXkKZmkKCg==' | base64 -d | tee /usr/bin/upd"
+sudo wget https://raw.githubusercontent.com/KernelKrise/scripts-and-configs/main/upd -O /usr/bin/upd
 sudo chmod +x /usr/bin/upd
 echo "[+] upd tool successfully set"
 
@@ -37,9 +37,8 @@ echo "[+] jq installed"
 echo '{"security.workspace.trust.enabled": false}' | jq > $HOME/.config/Code/User/settings.json
 echo "[+] forced vscode to always trust folders"
 
-# install vscode extensions                                                                                                           <-- TBD
+# install vscode extensions
 echo "[~] installing vscode extensions"
 code --install-extension ms-python.python
 code --install-extension ms-vscode.cpptools-extension-pack
 code --install-extension mgmcdermott.vscode-language-babel
-
