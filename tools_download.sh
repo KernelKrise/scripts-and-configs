@@ -7,9 +7,20 @@ BLUE="\033[34m"
 RESET="\033[0m"
 
 
-TARGET_FOLDER=~/privesc
+default_folder=~/privesc
+if [ $# -gt 0 ]; then
+    TARGET_FOLDER="$1"
+else
+    TARGET_FOLDER="$default_folder"
+    echo -e "${BLUE}Usage: $0 <target folder>${RESET}"
+    echo -e "${BLUE}If no folder is specified, the script will use the default target folder '${default_folder}'${RESET}"
+fi
+
 echo -e "TARGET FOLDER: $TARGET_FOLDER"
-rm -rf $TARGET_FOLDER
+if [ -d "$TARGET_FOLDER" ]; then
+    echo -e "${RED}Folder '$TARGET_FOLDER' already exists. Specify another folder for the script to create and then download the utilities there.${RESET}"
+    exit 1
+fi
 mkdir -p $TARGET_FOLDER/{windows,linux}
 
 
