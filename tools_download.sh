@@ -101,6 +101,7 @@ wget -q https://raw.githubusercontent.com/flozz/p0wny-shell/master/shell.php -O 
 
 
 # PowerSharpPack
+echo -e "${GREEN}Downloading PowerSharpPack...${RESET}"
 wget -q https://raw.githubusercontent.com/S3cur3Th1sSh1t/PowerSharpPack/master/PowerSharpPack.ps1 -O $TARGET_FOLDER/windows/PowerSharpPack.ps1
 
 
