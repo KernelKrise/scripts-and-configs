@@ -21,7 +21,7 @@ echo -e "${GREEN}[+] Wallpaper was successfully set${RESET}"
 
 # set update tool
 echo -e "${BLUE}[~] Installing updating tool${RESET}"
-sudo -q wget https://raw.githubusercontent.com/KernelKrise/scripts-and-configs/main/upd -O /usr/bin/upd
+sudo wget -q https://raw.githubusercontent.com/KernelKrise/scripts-and-configs/main/upd -O /usr/bin/upd
 sudo chmod +x /usr/bin/upd
 echo -e "${GREEN}[+] 'upd' tool installed${RESET}"
 
