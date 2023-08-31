@@ -1,29 +1,50 @@
 # scripts-and-configs
 This repository was created for automated installation of useful utilities on Kali Linux (mainly for pentest and binary vulnerabilities).
-List of utilities and features that can already be installed and configured with this script:
+List of utilities and features that can already be installed and configured with this scripts:
+
+alias_set.sh:
 ```
- - Updates system
- - Set normal wallpapers
+Add aliases:
+ - ll='ls -alh'
+ - pyhttp='python3 -m http.server 9000'
+ - cme='crackmapexec'
+ - pch='proxychains -q'
+```
+
+misc_install.sh:
+```
+ - Set my favourite wallpapers
+ - Install updating tool ('upd')
+ - Install JetBrainsMono Nerd Font
  - Set terminal transparency to 0
- - Update script called upd
- - vscode (plus extensions for python and C/C++)
- - software-properties-common
- - jq
- - Add some aliases (ll='ls -alh', pyhttp='python3 -m http.server 9000', cme='crackmapexec')
- - neovim
- - nvChad for neovim
- - Neovim syntax highlighitng
- - xclip
- - python LSP for neovim
- - JetBrainsMono Nerd Font
+```
+
+nvchad_install.sh:
+```
+ - Install neovim
+ - Install nvChad
+ - Add syntax highlighting
+ - Install python LSP for neovim
+```
+
+tools_download.sh
+```
+ - Download some scripts and binaries for Windows and Linux exploitation
+```
+
+tools_install.sh:
+```
+ - Install some useful tools 
+```
+
+vscode_install.sh:
+```
+ - Install vscode and some extensions
 ```
 
 TO DO:
 ```
- + BloodHound
  + BloodHound-python
- + privilege escalation tools (privesc_download.sh)
- + add more privesc tools (SharpHound, PowerView, etc)
  + kerbrute
  + droopescan
  + wpscan
@@ -36,10 +57,8 @@ TO DO:
  + Username Anarchy
  + cupp
  + DefaultCreds-cheat-sheet
- + pwn (ROPgadget, one_gadget, pwn_init.py, gdb gef, pwntools)
- + RE (Ghidra, IDA, z3, recaf, bytecpde viewer, olevba)
- + docker
- + modularize this script
+ + pwn (ROPgadget, one_gadget, pwn_init.py)
+ + RE (IDA, z3, recaf, bytecpde viewer, olevba)
  + write some documentation
  + touch some grass
 ```
