@@ -22,3 +22,8 @@ echo -e "${BLUE}[~] Installing docker${RESET}"
 sudo apt install -y docker.io
 echo -e "${GREEN}[+] Docker installed${RESET}"
 
+# gdb gef
+echo -e "${BLUE}[~] Installing gdb gef${RESET}"
+sudo apt install -y gdb
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+echo -e "${GREEN}[+] Docker gdb gef${RESET}"
