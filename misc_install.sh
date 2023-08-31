@@ -28,7 +28,7 @@ echo -e "${GREEN}[+] 'upd' tool installed${RESET}"
 
 # upgrade system
 echo -e "${BLUE}[~] Starting upgrading system${RESET}"
-upd --full
+/usr/bin/upd --full
 echo -e "${GREEN}[+] System upgraded${RESET}"
 
 
@@ -38,6 +38,7 @@ echo -e "${BLUE}[~] installing JetBrainsMono Nerd Font version: ${JetBrainsFontV
 wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/${JetBrainsFontVersion}/JetBrainsMono.zip"
 sudo mkdir /usr/share/fonts/truetype/jetbrains-mono
 sudo unzip JetBrainsMono.zip -d /usr/share/fonts/truetype/jetbrains-mono
+rm JetBrainsMono.zip
 # add cron job to make terminal not transparent and set new font (on reboot)
 crontab -l ; echo '@reboot echo b2xkRm9udD0kKGNhdCAkSE9NRS8uY29uZmlnL3F0ZXJtaW5hbC5vcmcvcXRlcm1pbmFsLmluaSB8IGdyZXAgZm9udEZhbWlseSk7IHNlZCAtaSAicy8kb2xkRm9udC9mb250RmFtaWx5PUpldEJyYWluc01vbm8gTmVyZCBGb250IE1vbm8vIiAkSE9NRS8uY29uZmlnL3F0ZXJtaW5hbC5vcmcvcXRlcm1pbmFsLmluaTsgb2xkVHJhbnNwYXJlbmN5PSQoY2F0ICRIT01FLy5jb25maWcvcXRlcm1pbmFsLm9yZy9xdGVybWluYWwuaW5pIHwgZ3JlcCBBcHBsaWNhdGlvblRyYW5zcGFyZW5jeSk7IHNlZCAtaSAicy8kb2xkVHJhbnNwYXJlbmN5L0FwcGxpY2F0aW9uVHJhbnNwYXJlbmN5PTAvIiAkSE9NRS8uY29uZmlnL3F0ZXJtaW5hbC5vcmcvcXRlcm1pbmFsLmluaTsgY3JvbnRhYiAtcg== | /usr/bin/base64 -d | /usr/bin/bash' | crontab -
 echo -e "${GREEN}[+] JetBrains Nerd Font installed. Restart to apply${RESET}"
