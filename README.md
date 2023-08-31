@@ -29,12 +29,31 @@ nvchad_install.sh:
 
 tools_download.sh
 ```
- - Download some scripts and binaries for Windows and Linux exploitation
+Download some scripts and binaries for Windows and Linux exploitation
+ - pspy
+ - linPEAS / WinPEAS
+ - socat
+ - chisel / chisel.exe
+ - PowerView.ps1 / SharpView.exe
+ - Rubeus.exe
+ - Inveigh.ps1 / Inveigh.exe
+ - LaZagne.exe
+ - SharpHound
+ - mimikatz.exe
+ - accesschk.exe
+ - p0wny shell
+ - PowerSharpPack
+ - ProcDump
 ```
 
 tools_install.sh:
 ```
- - Install some useful tools 
+Install some useful tools
+ - bloodhound
+ - docker
+ - gdb gef
+ - ghidra
+ - pwntools
 ```
 
 vscode_install.sh:
