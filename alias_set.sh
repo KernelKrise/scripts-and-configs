@@ -13,4 +13,4 @@ echo -e '\n# Custom config:' >> ~/.zshrc
 echo "alias ll='ls -alh'" >> ~/.zshrc
 echo "alias pyhttp='python3 -m http.server 9000'" >> ~/.zshrc
 echo "alias cme='crackmapexec'" >> ~/.zshrc
-echo "${GREEN}[+] Added aliases: ll='ls -alh', pyhttp='python3 -m http.server 9000', cme='crackmapexec'${RESET}"
+echo -e "${GREEN}[+] Added aliases: ll='ls -alh', pyhttp='python3 -m http.server 9000', cme='crackmapexec'${RESET}"
