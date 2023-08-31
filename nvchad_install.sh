@@ -36,7 +36,7 @@ echo -e "${GREEN}[+] xclip installed${RESET}"
 # set some options to nvim (in cmp plugin. Esc to exit autocomplete menu, Tab to comfirm, Down and Up to navigate)
 echo -e "${BLUE}[~] Setting up cmp keyboard settings${RESET}"
 sed 's/\["<C-e>"\] = cmp\.mapping\.close()/\["<Esc>"\] = cmp.mapping.close()/' -i $HOME/.config/nvim/lua/plugins/configs/cmp.lua
-sed 's/\["<CR>"\] = cmp\.mapping\.confirm/\["<Tab>"\] = cmp\.mapping\.confirm' -i $HOME/.config/nvim/lua/plugins/configs/cmp.lua
+sed 's/\["<CR>"\] = cmp\.mapping\.confirm/\["<Tab>"\] = cmp\.mapping\.confirm/' -i $HOME/.config/nvim/lua/plugins/configs/cmp.lua
 sed 's/\["<Tab>"\] = cmp\.mapping(function(fallback)/\["<Down>"\] = cmp\.mapping(function(fallback)/' -i $HOME/.config/nvim/lua/plugins/configs/cmp.lua
 sed 's/\["<S-Tab>"\] = cmp\.mapping(function(fallback)/\["<Up>"\] = cmp\.mapping(function(fallback)/' -i $HOME/.config/nvim/lua/plugins/configs/cmp.lua
 echo -e "${GREEN}[+] nvim cmp config changed${RESET}"
