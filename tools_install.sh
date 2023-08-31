@@ -38,5 +38,4 @@ sudo apt install -y python3 python3-pip python3-dev git libssl-dev libffi-dev bu
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade pwntools
 echo -e "export PATH=\$PATH:${HOME}/.local/bin" >> ~/.zshrc
-source ~/.zshrc
 echo -e "${GREEN}[+] pwntools installed${RESET}"
