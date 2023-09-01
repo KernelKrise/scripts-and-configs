@@ -62,7 +62,7 @@ echo -e "${GREEN}[+] ngrok installed${RESET}"
 
 # ROPgadget
 echo -e "${BLUE}[~] Installing ROPgadget${RESET}"
-sudo apt install python3-pip
+sudo apt install -y python3-pip
 sudo -H python3 -m pip install ROPgadget
 echo -e "${GREEN}[+] ROPgadget installed${RESET}"
 
@@ -89,3 +89,33 @@ echo -e "${GREEN}[+] oletools installed${RESET}"
 echo -e "${BLUE}[~] Installing z3-solver${RESET}"
 pip install z3-solver
 echo -e "${GREEN}[+] z3-solver installed${RESET}"
+
+# xxd
+echo -e "${BLUE}[~] Installing xxd${RESET}"
+sudo apt install -y xxd
+echo -e "${GREEN}[+] xxd installed${RESET}"
+
+# recaf
+echo -e "${BLUE}[~] Installing recaf${RESET}"
+RECAF_VERSION=$(curl -s -i https://github.com/Col-E/Recaf/releases/latest | grep location | awk -F'/' '{print $NF}')
+RECAF_VERSION=${RECAF_VERSION::-1}
+echo -e "${BLUE}RECAF VERSION: ${RECAF_VERSION}${RESET}"
+wget -q "https://github.com/Col-E/Recaf/releases/download/${RECAF_VERSION}/recaf-${RECAF_VERSION}-J8-jar-with-dependencies.jar" -O recaf.jar
+sudo mkdir -p /usr/share/recaf
+sudo mv recaf.jar /usr/share/recaf/recaf.jar
+sudo echo -e '#!/usr/bin/env bash\n\njava -jar /usr/share/recaf/recaf.jar' | sudo tee /usr/bin/recaf
+sudo chmod +x /usr/bin/recaf
+echo -e "${GREEN}[+] recaf installed${RESET}"
+
+# bytecode viewer
+echo -e "${BLUE}[~] Installing bytecode viewer${RESET}"
+BYTECODE_VIEWER_VERSION=$(curl -s -i https://github.com/Konloch/bytecode-viewer/releases/latest | grep location | awk -F'/' '{print $NF}')
+BYTECODE_VIEWER_VERSION=${BYTECODE_VIEWER_VERSION::-1}
+echo -e "${BLUE}BYTECODE VIEWER VERSION: ${BYTECODE_VIEWER_VERSION}${RESET}"
+wget -q "https://github.com/Konloch/bytecode-viewer/releases/download/${BYTECODE_VIEWER_VERSION}/Bytecode-Viewer-${BYTECODE_VIEWER_VERSION:1}.jar" -O bytecode_viewer.jar
+sudo mkdir -p /usr/share/bytecode_viewer
+sudo mv bytecode_viewer.jar /usr/share/bytecode_viewer/bytecode_viewer.jar
+sudo echo -e '#!/usr/bin/env bash\n\njava -jar /usr/share/bytecode_viewer/bytecode_viewer.jar' | sudo tee /usr/bin/bytecode_viewer
+sudo chmod +x /usr/bin/bytecode_viewer
+echo -e "${GREEN}[+] bytecode viewer installed${RESET}"
+
