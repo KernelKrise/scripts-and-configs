@@ -54,6 +54,15 @@ Install some useful tools
  - gdb gef
  - ghidra
  - pwntools
+ - bloodhound-python
+ - kerbrute-python
+ - droopescan
+ - ngrok
+ - ROPgadget
+ - one_gadget
+ - pwn_init.py
+ - oletools
+ - z3-solver
 ```
 
 vscode_install.sh:
