@@ -75,8 +75,7 @@ TO DO:
  + aquatone / eyewitness
  + configure tmux (just for fun)
  + XSStrike
- + DNS (subbrute, dig, subfinder, fierce)
- + Creds hunting (LaZagne / mimipenguin)
+ + DNS (subbrute, subfinder)
  + Username Anarchy
  + cupp
  + DefaultCreds-cheat-sheet
