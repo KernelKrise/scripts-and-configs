@@ -119,3 +119,37 @@ sudo echo -e '#!/usr/bin/env bash\n\njava -jar /usr/share/bytecode_viewer/byteco
 sudo chmod +x /usr/bin/bytecode_viewer
 echo -e "${GREEN}[+] bytecode viewer installed${RESET}"
 
+# IDA Free
+echo -e "${BLUE}[~] Downloading IDA Free${RESET}"
+wget -q wget https://out7.hex-rays.com/files/idafree83_linux.run -O ~/idafree83_linux.run
+chmod +x ~/idafree83_linux.run
+echo -e "${GREEN}[+] IDA Free downloaded${RESET}"
+
+# Default Credentials Cheat Sheet
+echo -e "${BLUE}[~] Installing Default Credentials Cheat Sheet${RESET}"
+pip3 install defaultcreds-cheat-sheet
+echo -e "${GREEN}[+] Default Credentials Cheat Sheet installed${RESET}"
+
+# cupp
+echo -e "${BLUE}[~] Installing cupp${RESET}"
+wget -q https://raw.githubusercontent.com/Mebus/cupp/master/cupp.py
+wget -q https://raw.githubusercontent.com/Mebus/cupp/master/cupp.cfg
+sudo mkdir -p /usr/share/cupp
+sudo mv cupp.py /usr/share/cupp/cupp.py
+sudo mv cupp.cfg /usr/share/cupp/cupp.cfg
+sudo chmod +x /usr/share/cupp/cupp.py
+sudo ln -s /usr/share/cupp/cupp.py /usr/bin/cupp
+echo -e "${GREEN}[+] cupp installed${RESET}"
+
+# Username Anarchy
+echo -e "${BLUE}[~] Installing Username Anarchy${RESET}"
+wget -q https://raw.githubusercontent.com/urbanadventurer/username-anarchy/master/username-anarchy
+wget -q https://raw.githubusercontent.com/urbanadventurer/username-anarchy/master/format-plugins.rb
+sudo mkdir -p /usr/share/username-anarchy
+sudo mv username-anarchy /usr/share/username-anarchy/username-anarchy
+sudo mv format-plugins.rb /usr/share/username-anarchy/format-plugins.rb
+sudo chmod +x /usr/share/username-anarchy/username-anarchy
+sudo sed -i "s/require 'format-plugins\.rb'/require '\/usr\/share\/username-anarchy\/format-plugins\.rb'/" /usr/bin/username-anarchy
+sudo ln -s /usr/share/username-anarchy/username-anarchy /usr/bin/username-anarchy
+echo -e "${GREEN}[+] Username Anarchy installed${RESET}"
+
