@@ -63,11 +63,6 @@ vscode_install.sh:
 
 TO DO:
 ```
- + BloodHound-python
- + kerbrute
- + droopescan
- + wpscan
- + ngrok
  + aquatone / eyewitness
  + configure tmux (just for fun)
  + XSStrike
@@ -76,8 +71,7 @@ TO DO:
  + Username Anarchy
  + cupp
  + DefaultCreds-cheat-sheet
- + pwn (ROPgadget, one_gadget, pwn_init.py)
- + RE (IDA, z3, recaf, bytecpde viewer, olevba)
+ + RE (IDA, recaf, bytecpde viewer)
  + write some documentation
  + touch some grass
 ```
