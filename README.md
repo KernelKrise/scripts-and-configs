@@ -66,6 +66,10 @@ Install some useful tools
  - xxd
  - recaf
  - bytecode viewer
+ - IDA Free
+ - Default Credentials Cheat Sheet
+ - cupp
+ - Username Anarchy
 ```
 
 vscode_install.sh:
@@ -75,15 +79,11 @@ vscode_install.sh:
 
 TO DO:
 ```
- + Make normal version grep via awk
+ + Make normal version grep via awk in tools_download.sh
  + aquatone / eyewitness
  + configure tmux (just for fun)
  + XSStrike
  + DNS (subbrute, subfinder)
- + Username Anarchy
- + cupp
- + DefaultCreds-cheat-sheet
- + IDA
  + write some documentation
  + touch some grass
 ```
