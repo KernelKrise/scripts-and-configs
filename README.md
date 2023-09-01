@@ -63,6 +63,9 @@ Install some useful tools
  - pwn_init.py
  - oletools
  - z3-solver
+ - xxd
+ - recaf
+ - bytecode viewer
 ```
 
 vscode_install.sh:
@@ -72,6 +75,7 @@ vscode_install.sh:
 
 TO DO:
 ```
+ + Make normal version grep via awk
  + aquatone / eyewitness
  + configure tmux (just for fun)
  + XSStrike
