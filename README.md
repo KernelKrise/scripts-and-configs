@@ -79,7 +79,7 @@ TO DO:
  + Username Anarchy
  + cupp
  + DefaultCreds-cheat-sheet
- + RE (IDA, recaf, bytecpde viewer)
+ + IDA
  + write some documentation
  + touch some grass
 ```
