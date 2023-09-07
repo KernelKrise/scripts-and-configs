@@ -70,6 +70,7 @@ Install some useful tools
  - Default Credentials Cheat Sheet
  - cupp
  - Username Anarchy
+ - seccomp-tools
 ```
 
 vscode_install.sh:
