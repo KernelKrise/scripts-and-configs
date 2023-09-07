@@ -153,3 +153,8 @@ sudo sed -i "s/require 'format-plugins\.rb'/require '\/usr\/share\/username-anar
 sudo ln -s /usr/share/username-anarchy/username-anarchy /usr/bin/username-anarchy
 echo -e "${GREEN}[+] Username Anarchy installed${RESET}"
 
+# Default Credentials Cheat Sheet
+echo -e "${BLUE}[~] Installing seccomp-tools${RESET}"
+sudo gem install seccomp-tools
+echo -e "${GREEN}[+] seccomp-tools installed${RESET}"
+
