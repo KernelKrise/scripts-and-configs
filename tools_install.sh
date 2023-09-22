@@ -158,3 +158,8 @@ echo -e "${BLUE}[~] Installing seccomp-tools${RESET}"
 sudo gem install seccomp-tools
 echo -e "${GREEN}[+] seccomp-tools installed${RESET}"
 
+# Default Credentials Cheat Sheet
+echo -e "${BLUE}[~] Installing htop${RESET}"
+sudo apt install htop
+echo -e "${GREEN}[+] htop installed${RESET}"
+
