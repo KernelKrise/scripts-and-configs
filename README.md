@@ -71,6 +71,7 @@ Install some useful tools
  - cupp
  - Username Anarchy
  - seccomp-tools
+ - htop
 ```
 
 vscode_install.sh:
