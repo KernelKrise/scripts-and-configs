@@ -81,6 +81,7 @@ vscode_install.sh:
 
 TO DO:
 ```
+ + kali-anonsurf
  + strace
  + Make normal version grep via awk in tools_download.sh
  + aquatone / eyewitness
