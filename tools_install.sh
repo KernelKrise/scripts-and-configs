@@ -163,3 +163,7 @@ echo -e "${BLUE}[~] Installing htop${RESET}"
 sudo apt install htop
 echo -e "${GREEN}[+] htop installed${RESET}"
 
+# Default Credentials Cheat Sheet
+echo -e "${BLUE}[~] Installing strace${RESET}"
+sudo apt install strace
+echo -e "${GREEN}[+] strace installed${RESET}"
