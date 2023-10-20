@@ -163,7 +163,12 @@ echo -e "${BLUE}[~] Installing htop${RESET}"
 sudo apt install htop
 echo -e "${GREEN}[+] htop installed${RESET}"
 
-# Default Credentials Cheat Sheet
+# strace
 echo -e "${BLUE}[~] Installing strace${RESET}"
 sudo apt install strace
 echo -e "${GREEN}[+] strace installed${RESET}"
+
+# tor
+echo -e "${BLUE}[~] Installing tor${RESET}"
+sudo apt install tor
+echo -e "${GREEN}[+] tor installed${RESET}"
