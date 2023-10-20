@@ -72,6 +72,8 @@ Install some useful tools
  - Username Anarchy
  - seccomp-tools
  - htop
+ - strace
+ - tor
 ```
 
 vscode_install.sh:
@@ -82,7 +84,6 @@ vscode_install.sh:
 TO DO:
 ```
  + kali-anonsurf
- + strace
  + Make normal version grep via awk in tools_download.sh
  + aquatone / eyewitness
  + configure tmux (just for fun)
