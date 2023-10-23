@@ -83,6 +83,7 @@ vscode_install.sh:
 
 TO DO:
 ```
+ + oh my zsh (plugins=(git zsh-autosuggestions zsh-syntax-highlighting), theme = 'eastwood')
  + kali-anonsurf
  + Make normal version grep via awk in tools_download.sh
  + aquatone / eyewitness
