@@ -14,4 +14,5 @@ echo "alias ll='ls -alh'" >> ~/.zshrc
 echo "alias pyhttp='python3 -m http.server 9000'" >> ~/.zshrc
 echo "alias cme='crackmapexec'" >> ~/.zshrc
 echo "alias pch='proxychains -q'" >> ~/.zshrc
+echo "alias uenc='jq -sRr @uri'" >> ~/.zshrc
 echo -e "${GREEN}[+] Added aliases: ll='ls -alh', pyhttp='python3 -m http.server 9000', cme='crackmapexec', pch='proxychains -q'${RESET}"
